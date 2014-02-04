@@ -29,6 +29,70 @@ fieldset#filters, fieldset#date-range { background-color: #F5FCFC }
   background: saturate(lighten(#CC0033, 2.5%), 10%);
 }
 
+#login-form {
+  #gradient > .vertical(lighten(#ddca98, 20%), lighten(#ddca98, 10%));
+  color: black;
+}
+
+#gradient {
+  .vertical-sekas(@startColor: #555, @endColor: #333, @pct) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, -moz-linear-gradient(top, @startColor, @endColor) repeat-x; // FF 3.6+
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, -ms-linear-gradient(top, @startColor, @endColor) repeat-x; // IE10
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)) repeat-x; // Safari 4+, Chrome 2+
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, -webkit-linear-gradient(top, @startColor, @endColor) repeat-x; // Safari 5.1+, Chrome 10+
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, -o-linear-gradient(top, @startColor, @endColor) repeat-x; // Opera 11.10
+    background: url(../images/pc-bg-big-bottom.svg) center @pct no-repeat, linear-gradient(top, @startColor, @endColor) repeat-x; // The standard
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+  }
+}
+
+#header {
+  #gradient > .vertical-sekas(lighten(#ddca98, 20%), lighten(#ddca98, 10%), 50%);
+  color: #CC0033;
+}
+
+@media screen and (min-aspect-ratio: 10/6)
+{
+    #header {
+      #gradient > .vertical-sekas(lighten(#ddca98, 10%), lighten(#ddca98, 40%), 90%);
+      color: #CC0033;
+    }
+}
+
+#header h1 {
+  color: #CC0033;
+}
+
+#header a {
+  color: #CC0033;
+}
+
+#main-menu {
+    font-family: Verdana,Helvetica,Arial,sans-serif
+}
+
+body {
+  .verdana;
+}
+
+body {   
+  background: white;
+}
+
+#content h2 {
+    #gradient > .vertical(lighten(#ddca98, 20%), lighten(#ddca98, 10%));
+}
+
+div.issue {
+  background: lighten(#ddca98, 20%);
+
+}
+
+#cbp_images_form {
+    margin-left: 300px;
+}
+
 /* == Colors change example ==
 
 a, a:link, a:visited { color: #cc0000 }
@@ -44,3 +108,4 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
 .box { background-color:#FCF5FC; }
 
 */
+
